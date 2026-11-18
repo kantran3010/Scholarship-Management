@@ -1,0 +1,13 @@
+# File cấu hình cục bộ và dữ liệu nhạy cảm
+backend/config/local.php
+.env
+
+# File tạm, nhật ký
+*.log
+.DS_Store
+Thumbs.db
+
+# Tệp minh chứng do sinh viên tải lên (không đưa lên repo)
+backend/storage/uploads/*
+!backend/storage/uploads/.htaccess
+!backend/storage/uploads/index.php

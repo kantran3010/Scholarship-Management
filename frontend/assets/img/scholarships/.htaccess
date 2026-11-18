@@ -1,0 +1,4 @@
+# Thư mục chứa ảnh bìa do quản trị viên tải lên: tuyệt đối không cho thực thi mã PHP ở đây
+<FilesMatch "\.(php|phtml|php3|php4|php5|phps|phar)$">
+    Require all denied
+</FilesMatch>

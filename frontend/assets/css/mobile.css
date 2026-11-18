@@ -1,0 +1,147 @@
+/* ==== Giao diện điện thoại (≤ 767px). Tải SAU style.css để ghi đè. Máy tính không bị ảnh hưởng. ==== */
+
+/* Chữ & khoảng cách gọn hơn trên màn nhỏ */
+@media (max-width: 767.98px) {
+    html { -webkit-text-size-adjust: 100%; }
+    body { font-size: 0.95rem; line-height: 1.55; }
+    h1, .h1 { font-size: 1.5rem; }
+    h2, .h2 { font-size: 1.3rem; }
+    h3, .h3 { font-size: 1.15rem; }
+    main.container { padding-top: 1rem !important; padding-bottom: 5.5rem !important; padding-left: 0.9rem; padding-right: 0.9rem; }
+
+    /* Chạm dễ hơn: vùng bấm tối thiểu ~44px */
+    .btn { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+    .btn-sm { min-height: 38px; }
+    .btn-lg { min-height: 50px; }
+    .nav-link, .dropdown-item { min-height: 44px; display: flex; align-items: center; }
+    .dropdown-item { padding-top: 0.6rem; padding-bottom: 0.6rem; }
+
+    /* Ô nhập: 16px để iOS không tự phóng to */
+    .form-control, .form-select, .form-control-sm, .form-select-sm { font-size: 16px; min-height: 44px; }
+    textarea.form-control { min-height: 110px; }
+    .form-label { font-weight: 600; font-size: 0.9rem; }
+
+    /* Thanh điều hướng trên cùng gọn: logo + nút menu + đăng nhập */
+    .app-nav { padding: 0.45rem 0; position: sticky; top: 0; z-index: 1030; }
+    .app-nav .container { flex-wrap: wrap; gap: 0.25rem; }
+    .navbar-logo { height: 34px; }
+    .app-nav .navbar-toggler { padding: 0.4rem 0.6rem; min-height: 44px; min-width: 44px; }
+    .app-nav .navbar-collapse {
+        margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--line);
+        max-height: calc(100vh - 80px); overflow-y: auto;
+    }
+    .app-nav .navbar-nav .nav-link { padding-left: 0.25rem; }
+    .app-nav .nav-link.active { box-shadow: inset 3px 0 0 var(--blue); }
+    .app-nav .nav-cta { display: block; text-align: center; margin-top: 0.4rem; }
+    .nav-search { width: 100%; margin: 0.6rem 0 !important; }
+    .nav-search .form-control { min-width: 0; flex: 1; }
+    .account-dropdown .account-toggle { width: 100%; }
+    .account-dropdown .dropdown-menu { width: 100%; min-width: 0; }
+    .app-nav .d-flex.align-items-center.gap-2 { width: 100%; justify-content: space-between; }
+    .app-nav .d-flex.align-items-center.gap-2 .btn { flex: 1; }
+    .account-text .account-sub { max-width: 170px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+    /* Thông báo flash */
+    .alert { font-size: 0.9rem; padding: 0.75rem 2.5rem 0.75rem 0.9rem; }
+
+    /* Khung nội dung & bộ lọc */
+    .panel, .filter-bar { padding: 0.9rem; border-radius: 12px; }
+    .filter-bar .row > [class*="col-"] { margin-bottom: 0.4rem; }
+    .filter-bar .btn { width: 100%; }
+    .stat { padding: 0.8rem 0.9rem; }
+    .stat .value { font-size: 1.4rem; }
+    .stat .label { font-size: 0.8rem; }
+    .step-box { padding: 1rem; }
+
+    /* Bảng: cuộn ngang mượt, ô chữ không xuống dòng quá nhiều */
+    .table-wrap { -webkit-overflow-scrolling: touch; border-radius: 12px; }
+    .table > :not(caption) > * > * { padding: 0.5rem 0.55rem; font-size: 0.88rem; }
+
+    /* Danh sách chương trình: thẻ dọc, ảnh/nút rõ ràng */
+    .program { padding: 0.85rem; gap: 0.4rem; margin-bottom: 0.7rem; border-radius: 12px; }
+    .program-main h2 { font-size: 1rem; }
+    .program-amount .money { font-size: 1.1rem; }
+    .program .btn { width: 100%; }
+
+    /* Thẻ chương trình trang chủ */
+    .modern-course-card { border-radius: 16px; }
+    .card-img-wrap { height: 160px; }
+    .card-content { padding: 16px; }
+    .course-title { font-size: 1.05rem; margin-bottom: 8px; }
+    .course-meta { gap: 10px; margin-bottom: 12px; flex-wrap: wrap; font-size: 0.8rem; }
+    .card-divider { margin-bottom: 14px; }
+    .course-footer { flex-wrap: wrap; gap: 10px; }
+    .action-wrap { width: 100%; justify-content: space-between; }
+    .btn-modern-primary { min-height: 44px; display: inline-flex; align-items: center; padding: 10px 20px; }
+    .price { font-size: 1.1rem; }
+
+    /* Chi tiết chương trình */
+    .program-info { font-size: 0.95rem; }
+    .apply-section { padding-top: 1.25rem; }
+    .apply-section .btn { width: 100%; }
+    .requirement-list li { margin-bottom: 0.5rem; }
+
+    /* Giỏ học bổng: tổng tiền & nút thanh toán dính dưới cùng */
+    .cart-total { font-size: 1rem; }
+    .cart-link { font-size: 1.35rem; padding: 0.5rem; min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }
+
+    /* Bộ đếm & nút nhỏ trong bảng */
+    .table .btn-sm { padding: 0.3rem 0.6rem; }
+    .table .btn-group .btn { min-height: 36px; }
+
+    /* Chân trang: gọn, chia khối rõ, liên hệ bấm được */
+    .app-footer { padding: 1.25rem 0 5.5rem; margin-top: 1.5rem; font-size: 0.9rem; }
+    .app-footer .row { row-gap: 0 !important; }
+    .app-footer .footer-brand { padding-bottom: 1rem; border-bottom: 1px solid var(--line); margin-bottom: 1rem; }
+    .app-footer .footer-brand .fw-semibold { font-size: 1rem; color: var(--ink); }
+    .footer-heading {
+        font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+        color: var(--muted); margin-bottom: 0.4rem;
+    }
+    .footer-contact li { display: flex; align-items: flex-start; gap: 0.6rem; padding: 0.35rem 0; line-height: 1.45; }
+    .footer-contact i { color: var(--blue); font-size: 1rem; margin-top: 0.15rem; flex-shrink: 0; width: 1.1rem; text-align: center; }
+    .footer-contact a { color: var(--ink); text-decoration: none; overflow-wrap: anywhere; }
+    .footer-contact a:active { color: var(--blue); }
+    .footer-links { display: grid; grid-template-columns: 1fr; margin-top: 0.25rem; }
+    .footer-links li { border-bottom: 1px solid var(--line); }
+    .footer-links li:last-child { border-bottom: 0; }
+    .footer-links a { display: flex; align-items: center; justify-content: space-between; min-height: 44px; color: var(--ink); text-decoration: none; }
+    .footer-links a::after { content: "\F285"; font-family: "bootstrap-icons"; color: var(--muted); font-size: 0.8rem; }
+    .app-footer .footer-copy { font-size: 0.75rem; text-align: center; margin-top: 1rem; padding-top: 0.9rem; }
+
+    /* Thanh tab dưới cùng (kiểu ứng dụng) */
+    .mobile-tabbar {
+        position: fixed; left: 0; right: 0; bottom: 0; z-index: 1040;
+        display: flex; justify-content: space-around; align-items: stretch;
+        background: var(--surface); border-top: 1px solid var(--line);
+        padding: 0.3rem 0.25rem calc(0.3rem + env(safe-area-inset-bottom));
+        box-shadow: 0 -4px 14px rgba(0, 0, 0, 0.06);
+    }
+    .mobile-tabbar a {
+        flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+        gap: 2px; min-height: 52px; font-size: 0.7rem; font-weight: 600; color: var(--muted);
+        text-decoration: none; position: relative; border-radius: 10px;
+    }
+    .mobile-tabbar a i { font-size: 1.25rem; line-height: 1; }
+    .mobile-tabbar a.active { color: var(--blue); }
+    .mobile-tabbar a.active i { color: var(--blue); }
+    .mobile-tabbar .tab-badge { position: absolute; top: 4px; left: calc(50% + 6px); font-size: 0.6rem; }
+    :root[data-theme="dark"] .mobile-tabbar a.active { color: #a5b4fc; }
+    :root[data-theme="dark"] .mobile-tabbar a.active i { color: #a5b4fc; }
+
+    /* Thông báo toast/alert không che thanh tab */
+    .alert-dismissible { margin-bottom: 0.75rem; }
+    .toast-container { bottom: 5rem !important; }
+}
+
+/* Nút chat nổi: đặt cao hơn thanh tab dưới cùng trên điện thoại */
+@media (max-width: 767.98px) {
+    .chat-fab-group { bottom: calc(5.5rem + env(safe-area-inset-bottom)); right: 12px; }
+    .chat-fab-group .fab { width: 46px; height: 46px; font-size: 1.2rem; }
+    .chat-panel { right: 8px; bottom: calc(5.5rem + 60px); width: calc(100vw - 16px); height: 60vh; }
+}
+
+/* Thanh tab chỉ hiển thị trên điện thoại */
+@media (min-width: 768px) {
+    .mobile-tabbar { display: none !important; }
+}
